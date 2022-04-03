@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&display=swap');
+
+*, *::before, ::after {
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right top, #316B83, black);
+}
+
+/* Creating calculator board */
+.calculator-grid {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  min-height: 100vh;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: repeat(5, 100px);
+}
+
+.calculator-grid>button {
+  cursor: pointer;
+  font-size: 2.5rem;
+  border: 1px solid white;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.85);
+  min-height: 100px;
+  min-width: 100px;
+}
+
+/* Hover over buttons*/
+.calculator-grid>button:hover {
+  background-color: rgba(55, 155, 255, 0.5);
+}
+
+.span-two {
+  grid-column: span 2;
+}
+
+.output {
+  grid-column: 1 / -1;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 10px;
+  word-wrap: break-word;
+  word-break: break-all;
+  border-top-left-radius: 10px;
+  style="border-top-right-radius:10px;
+border: 3px solid rgba(55, 155, 255, 0.5);
+  margin-top: -3rem;
+}
+
+.output .previous-operand {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 1.5rem;
+}
+
+.output .current-operand {
+  color: rgba(255, 255, 255, 1);
+  font-size: 2.5rem;
+}
+
+button[data-operation]:active {
+  transform: scale(.8);
+}
+
+button[data-number]:active {
+  transform: scale(.8)
+}
+
+button[data-all-clear]:hover {
+  background: red;
+  color: white;
+}
+
+button[data-delete]:hover {
+  background-color: rgb(230, 73, 99);
+  color: white;
+}
+
+button[data-equals] {
+  background-color: rgba(255, 255, 255, 0.85);
+  color: black;
+  border: 2px solid rgb(37, 1, 105);
+  ;
+}
+
+button[data-equals]:hover {
+  background-color: rgb(37, 1, 105);
+  color: white;
+}
