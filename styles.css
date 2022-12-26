@@ -52,9 +52,9 @@ body {
   word-wrap: break-word;
   word-break: break-all;
   border-top-left-radius: 10px;
-  style="border-top-right-radius:10px;
+  border-top-right-radius:10px;
 border: 3px solid rgba(55, 155, 255, 0.5);
-  margin-top: -3rem;
+margin-top: -3rem;
 }
 
 .output .previous-operand {
